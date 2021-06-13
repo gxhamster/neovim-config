@@ -1,0 +1,18 @@
+" Neovim Config (New 😋)
+
+
+" Plugins
+call plug#begin()
+    Plug 'tpope/vim-fugitive'
+    Plug 'calviken/vim-gdscript3'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+call plug#end()
+
+" Configs
+source $HOME/.config/nvim/configs/general.vim
+source $HOME/.config/nvim/configs/custom_remaps.vim
+source $HOME/.config/nvim/configs/telescope.vim
+
+
