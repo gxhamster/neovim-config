@@ -15,3 +15,6 @@ map <C-k> <C-w>k
 map <C-j> <C-w>j
 
 
+" Git stuff
+nmap <leader>gb :Git blame<CR>
+nmap <leader>gs :Git<CR>
