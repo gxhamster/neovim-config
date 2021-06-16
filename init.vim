@@ -1,11 +1,11 @@
 " Neovim Config (New 😋)
 
-
 " Plugins
 call plug#begin()
-    Plug 'tpope/vim-fugitive'
+    Plug 'jceb/vim-orgmode'   
     Plug 'calviken/vim-gdscript3'
     Plug 'nvim-lua/popup.nvim'
+    Plug 'tpope/vim-fugitive'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 call plug#end()

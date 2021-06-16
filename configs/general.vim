@@ -18,6 +18,10 @@ set foldmethod=indent
 setlocal foldlevelstart=99
 set shiftround
 
+
+" Set leader key
+let mapleader=" "
+
 set path+=**
 
 " Ignore certain files and folders when globbing
@@ -41,13 +45,29 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp936,gbk,utf-16le
 
-" Removing status line
-set noshowmode
-set noruler
-set laststatus=0
-set noshowcmd
-set cmdheight=1
 
-colorscheme default
+" Function for toggling the bottom statusbar:
+let s:hidden_all = 0
+function! ToggleHiddenAll()
+    if s:hidden_all  == 0
+        let s:hidden_all = 1
+        set noshowmode
+        set noruler
+        set laststatus=0
+        set noshowcmd
+    else
+        let s:hidden_all = 0
+        set showmode
+        set ruler
+        set laststatus=2
+        set showcmd
+    endif
+endfunction
 
-let mapleader=" "
+call ToggleHiddenAll()
+
+nnoremap <leader>h :call ToggleHiddenAll()<CR>
+
+
+colorscheme jellybeans
+
